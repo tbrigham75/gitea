@@ -36,7 +36,7 @@ RUN microdnf install \
     #Added above shadow utils for groupadd and useradd
     #curl \
     #gnupg
-
+RUN mkdir -p /var/lib/gitea /etc/gitea
 RUN groupadd \
     -g 1000 \
     git && \
@@ -48,7 +48,6 @@ RUN groupadd \
     -g git \
     git
 
-RUN mkdir -p /var/lib/gitea /etc/gitea
 RUN chown git:git /var/lib/gitea /etc/gitea
 
 COPY docker/rootless /
