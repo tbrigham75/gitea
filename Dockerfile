@@ -36,7 +36,7 @@ RUN microdnf install \
     #Added above shadow utils for groupadd and useradd
     #curl \
     #gnupg
-RUN mkdir -p /var/lib/gitea /etc/gitea
+RUN mkdir -p /var/lib/gitea /etc/gitea /usr/local/bin/environment-to-ini
 RUN groupadd \
     -g 1000 \
     git && \
